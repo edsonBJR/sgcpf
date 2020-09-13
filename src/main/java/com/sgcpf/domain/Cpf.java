@@ -20,8 +20,9 @@ public class Cpf implements Serializable{
 	public Cpf() {
 	}
 
-	public Cpf(String cpf, String date) {
+	public Cpf(Integer id, String cpf, String date) {
 		super();
+		this.id = id;
 		this.cpf = cpf;
 		this.date = date;
 	}
