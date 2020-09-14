@@ -1,6 +1,7 @@
 package com.sgcpf.domain;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -12,19 +13,18 @@ public class Cpf implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	private String cpf;
-	private String date;
+	private Date createdAt;
 	
 	public Cpf() {
 	}
 
-	public Cpf(Integer id, String cpf, String date) {
+	public Cpf(Integer id, String cpf, Date createdAt) {
 		super();
-		this.id = id;
 		this.cpf = cpf;
-		this.date = date;
+		this.createdAt = createdAt;
 	}
 	
 	public Integer getId() {
@@ -43,12 +43,12 @@ public class Cpf implements Serializable{
 		this.cpf = cpf;
 	}
 
-	public String getDate() {
-		return date;
+	public Date getCreatedAt() {
+		return createdAt;
 	}
 
-	public void setDate(String date) {
-		this.date = date;
+	public void setCreatedAt(Date createdAt) {
+		this.createdAt = createdAt;
 	}
 
 	@Override
@@ -75,5 +75,5 @@ public class Cpf implements Serializable{
 			return false;
 		return true;
 	}
-
+	
 }
