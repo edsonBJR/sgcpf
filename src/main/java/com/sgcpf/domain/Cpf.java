@@ -23,6 +23,13 @@ public class Cpf implements Serializable{
 
 	public Cpf(Integer id, String cpf, Date createdAt) {
 		super();
+		this.id = id;
+		this.cpf = cpf;
+		this.createdAt = createdAt;
+	}
+	
+	public Cpf(String cpf, Date createdAt) {
+		super();
 		this.cpf = cpf;
 		this.createdAt = createdAt;
 	}
