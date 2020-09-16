@@ -5,4 +5,51 @@
 #### A api permite, *cadastrar*, *consultar* e *deletar* CPF's.
 
 
+	### Nome da API
+
+#### SGCPF
+
+	### Objetivo
+
+**O objetivo da API é fazer uma gestão de CPF's.**
+
+	### Breve descrição 
+
+**A api permite o cadastro, consulta e deletar um CPF.**
+
+	### Como rodar a api
+
+**Para rodar basta baixar (clone) o projeto apartir de github.**
+
+
+	### Como testar o funcionamento
+
+__Sugestão, utilizar o Postman para teste dos endpoints.__
+
+Enpoints para teste
+
+|Verbo|URI|
+|----|-----------------------------------------------------------------|
+|GET | http://localhost:8080/cpf -> Listar todos os CPF's cadastrados  |
+|----|-----------------------------------------------------------------|
+|GET | http://localhost:8080/cpf/{cpf} -> Consultar se um CPF está cadastrado, nessário informar um CPF válido. |
+|----|----------------------------------------------------------------------------------------------------------|
+|POST | http://localhost:8080/cpf -> Cadastrar um CPF, necessário enviar um CPF no corpo da requisição, como exemplo abaixo: |
+|-----|----------------------------------------------------------------------------------------------------------------------|
+
+
+GET - http://localhost:8080/cpf -> Listar todos os CPF's cadastrados
+
+GET - http://localhost:8080/cpf/{cpf} -> Consultar se um CPF está cadastrado, nessário informar um CPF válido.
+
+POST - http://localhost:8080/cpf -> Cadastrar um CPF, necessário enviar um CPF no corpo da requisição, como exemplo abaixo:
+
+{
+  "cpf": "cpf válido"
+}
+
+DELETE - http://localhost:8080/cpf/{cpf} -> Deletar um CPF, necessário informar um CPF "válido" na url da requisição.
+
+OBS: A API faz verifica se o CPF informado é válido.
+
 
