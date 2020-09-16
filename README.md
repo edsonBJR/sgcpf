@@ -50,6 +50,6 @@ __Sugestão, utilizar o Postman para teste dos endpoints.__
 |DELETE|http://localhost:8080/cpf/{cpf}|Deletar um CPF, necessário informar um CPF "válido" na url da requisição.|
 
 
-OBS: A API faz verifica se o CPF informado é válido.
+OBS: A API verifica se o CPF informado é válido.
 
 
