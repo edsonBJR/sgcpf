@@ -5,28 +5,28 @@
 #### A api permite, *cadastrar*, *consultar* e *deletar* CPF's.
 
 
-	### Nome da API
+### Nome da API
 
-#### SGCPF
+	SGCPF
 
-	### Objetivo
+### Objetivo
 
-**O objetivo da API é fazer uma gestão de CPF's.**
+	**O objetivo da API é fazer uma gestão de CPF's.**
 
-	### Breve descrição 
+### Breve descrição 
 
-**A api permite o cadastro, consulta e deletar um CPF.**
+	**A api permite o cadastro, consulta e deletar um CPF.**
 
-	### Como rodar a api
+### Como rodar a api
 
-**Para rodar basta baixar (clone) o projeto apartir de github.**
+	**Para rodar basta baixar (clone) o projeto apartir de github.**
 
 
-	### Como testar o funcionamento
+### Como Utilizar a API
 
 __Sugestão, utilizar o Postman para teste dos endpoints.__
 
-Enpoints para teste
+##### Enpoints para teste
 
 |Verbo|URI|Descrição|
 |-|-|-|
