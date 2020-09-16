@@ -11,11 +11,11 @@
 
 ### Objetivo
 
-	**O objetivo da API é fazer uma gestão de CPF's.**
+	O objetivo da API é fazer uma gestão de CPF's.
 
 ### Breve descrição 
 
-	**A api permite o cadastro, consulta e deletar um CPF.**
+	A api permite o cadastro, consulta e deletar um CPF.
 
 ### Como rodar e testar a api
 
