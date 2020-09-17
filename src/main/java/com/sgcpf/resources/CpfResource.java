@@ -1,8 +1,8 @@
 package com.sgcpf.resources;
 
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import javax.validation.Valid;
 
@@ -17,6 +17,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import com.sgcpf.config.validation.ValidaCPF;
 import com.sgcpf.domain.Cpf;
+import com.sgcpf.domain.Cpfs;
 import com.sgcpf.dto.CpfDTO;
 import com.sgcpf.exceptions.InvalidCpfException;
 import com.sgcpf.exceptions.NotFoundCpfException;
@@ -30,11 +31,13 @@ public class CpfResource {
 	private CpfService cpfService;
 
 	@RequestMapping(method=RequestMethod.GET)
-	public ResponseEntity<List<CpfDTO>> buscarTodos() {		
-		List<Cpf> list = cpfService.buscarTodos();
-		
-		List<CpfDTO> listDto = list.stream().map(obj -> new CpfDTO(obj)).collect(Collectors.toList());  
-		return ResponseEntity.ok().body(listDto);
+	public ResponseEntity<Cpfs> buscarTodos() {
+	
+		Cpfs resposta = new Cpfs();
+		ArrayList<Cpf> list = new ArrayList<>();
+		cpfService.buscarTodos().forEach(e -> list.add(e));
+		resposta.setCpfList(list);
+		return ResponseEntity.ok().body(resposta);
 	}
 	
 	@RequestMapping(value="/{cpf}", method=RequestMethod.GET)
