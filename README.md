@@ -88,13 +88,14 @@ __Sugestão, utilizar o Postman para teste dos endpoints,__ mas caso queira o co
 
 A tabela abaixo descreve o verbo http a uri do recurso e o que esperar de retorno da requisição.
 
-|Verbo|URI|Retorn da Requisição|
-|-|-|-|
-|GET | http://localhost:8080/cpf | Listar todos os CPF's cadastrados  |
-|GET | http://localhost:8080/cpf/{cpf} | Consultar se um CPF está cadastrado, nessário informar um CPF válido. |
-|POST | http://localhost:8080/cpf | Cadastrar um CPF, necessário enviar um CPF no corpo da requisição, como exemplo: { "cpf": "cpfvalido" }|
-|DELETE|http://localhost:8080/cpf/{cpf}|Deletar um CPF, necessário informar um CPF "válido" na url da requisição.|
+|Verbo|URI|Retorno da Requisição| BODY |
+|-|-|-|-|
+|GET | http://localhost:8080/cpf | Listar todos os CPF's cadastrados  ||
+|GET | http://localhost:8080/cpf/{cpf} | Consultar se um CPF está cadastrado, nessário informar um CPF válido. ||
+|POST | http://localhost:8080/cpf | Cadastrar um CPF, necessário enviar um CPF no corpo da requisição, somente os numeros| { "cpf": "00012649074" }|
+|DELETE|http://localhost:8080/cpf/{cpf}|Deletar um CPF, necessário informar um CPF "válido" na url da requisição.||
 
+*O CPF utilizado na tabela acima, foi gerado aleatóriamente para exemplificar o teste.
 
 OBS: A API sempre verifica se o CPF informado é válido. Está funcionalidade foi obtida de terceiros, na classe de nome ValidaCPF faço referência ao autor.
 
