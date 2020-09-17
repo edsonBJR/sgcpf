@@ -48,19 +48,21 @@ A configuração deve ser feita na tag como aparece abaixo:
 					  <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>
 				</configuration>
+```
 
-Onde está escrito {SEU_DOCKER_ID}, altere para o seu que você obtem quando se cadastar no repositorio Docker Hub, o resultado final deve ser como o exemplo abaixo:
+
+Onde está escrito {SEU_DOCKER_ID}, altere para o seu Docker ID, que você obtêm quando se cadastar no repositorio Docker Hub, o resultado final deve ser como o exemplo abaixo:
 
 ```xml
 				<configuration>
 					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
-					<repository>{SEU_DOCKER_ID}/sgcpf</repository>
+					<repository>fulanodetal/sgcpf</repository>
 					<tag>${project.version}</tag>
 					<buildArgs>
 					  <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
 					</buildArgs>
 				</configuration>
-
+```
 
 Crie um Container com o comando abaixo, que deve ser executado na pasta raiz do projeto, onde está o arquivo Dockerfile, lembre de ter o Apache Maven instalado e configurado.
 
