@@ -16,7 +16,8 @@ Duas são as opções de obter a api e executa-la:
 
 Primeira Opção:
 Atráves do download do repositorio do Docker Hub, abaixo segue o link para download:
-[Docker Hub](https://hub.docker.com/repository/docker/edsonbjr/spring-docker-sgcpf)
+
+[Docker Hub](https://hub.docker.com/r/edsonbjr/spring-docker-sgcpf)
 
 Execute o seguinte comando para baixar a imagem, caso queira fazer pela linha de comando:
 
@@ -29,10 +30,56 @@ Após o download executar o comando abaixo para rodar a api como um container Do
 Feito isso ja temos um container da ultima versão da API em execução e pode ser testada conforme a explicação abaixo:
 
 Segunda Opção:
-Clone o projeto
+Essa opção é para o caso de querer fazer alguma alteração e personalizar a sua versão do container, por exemplo.
+
+Clone o projeto, digitando o comando abaixo:
+
+	git clone https://github.com/edsonBJR/sgcpf.git
+
 Configure o arquivo POM.xml
-Crie um Container
-Rode o Container
+A configuração deve ser feita na tag como aparece abaixo:
+
+```xml
+				<configuration>
+					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
+					<repository>{SEU_DOCKER_ID}/sgcpf</repository>
+					<tag>${project.version}</tag>
+					<buildArgs>
+					  <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
+					</buildArgs>
+				</configuration>
+
+Onde está escrito {SEU_DOCKER_ID}, altere para o seu que você obtem quando se cadastar no repositorio Docker Hub, o resultado final deve ser como o exemplo abaixo:
+
+```xml
+				<configuration>
+					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
+					<repository>{SEU_DOCKER_ID}/sgcpf</repository>
+					<tag>${project.version}</tag>
+					<buildArgs>
+					  <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
+					</buildArgs>
+				</configuration>
+
+
+Crie um Container com o comando abaixo, que deve ser executado na pasta raiz do projeto, onde está o arquivo Dockerfile, lembre de ter o Apache Maven instalado e configurado.
+
+	mvn package
+
+Conferir se a imagem foi criada, com o comando:
+
+	docker images
+
+O resultado dever ser algo parecido com a tabela abaixo:
+
+| REPOSITORY | TAG | IMAGE ID | CREATED | SIZE |
+|-|-|-|-|-|
+| {seu_docker_id}/sgcpf | 0.0.1 | 199670908460 | 21 hours ago | 465MB |
+|-|-|-|-|-|
+
+Agora já pode rodar sua imagem docker, use o comando abaixo:
+
+	docker run -p 8080:8080 {seu_docker_id}/sgcpf:0.0.1
 
 #### Como Testar as funcionalidade da API
 
