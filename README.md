@@ -88,7 +88,7 @@ __Sugestão, utilizar o Postman para teste dos endpoints,__ mas caso queira o co
 
 A tabela abaixo descreve o verbo http a uri do recurso e o que esperar de retorno da requisição.
 
-|Verbo|URI|Retorno da Requisição| BODY |
+|Verbo|URI|Retorno da Requisição| CORPO |
 |-|-|-|-|
 |GET | http://localhost:8080/cpf | Listar todos os CPF's cadastrados  ||
 |GET | http://localhost:8080/cpf/{cpf} | Consultar se um CPF está cadastrado, nessário informar um CPF válido. ||
