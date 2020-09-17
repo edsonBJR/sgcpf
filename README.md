@@ -1,29 +1,36 @@
-# API REST - Gestão de CPF's
+## API REST - Gestão de CPF's
 
-### O objetivo desta API é criar uma solução para Gestão de __CPF's__.
+O objetivo desta API é criar uma solução para Gestão de __CPF's__.
 
-#### A api permite, *cadastrar*, *consultar* e *deletar* CPF's.
+A api permite, *cadastrar*, *consultar* e *deletar* CPF's.
 
 
-### Nome da API
+#### Nome da API
 
 	SGCPF
+	
+#### Tecnologias Utilizadas
 
-### Objetivo
+	Java 11 - Spring 2.3.3 - H2 Database - Apache Maven 3.6.3 - Docker 19.03.12 - JUnit 
+
+#### Objetivo
 
 	O objetivo da API é fazer uma gestão de CPF's.
 
-### Breve descrição 
+#### Breve descrição 
 
 	A api permite o cadastro, consulta e deletar um CPF.
 
-### Como rodar e testar a api
+#### Como rodar e testar a api
+
 
 Disponibilizei a última versão da API que pode ser baixa apartir do dockerhub.com
+
 
 Digite o seguinte comando para obter a imagem do container: 
 
 	sudo docker pull edsonbjr/spring-docker-sgcpf:0.0.1-SNAPSHOT
+
 
 Execute o container
 
@@ -33,13 +40,13 @@ Execute o container
 Feito isso ja temos um container da ultima versão da API em execução e pode ser testada conforme a explicação abaixo:
 
 
-### Como Utilizar a API
+#### Como Utilizar a API
 
 
 __Sugestão, utilizar o Postman para teste dos endpoints.__
 
 
-##### Enpoints para teste
+#### Enpoints para teste
 
 
 |Verbo|URI|Descrição|
