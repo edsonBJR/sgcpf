@@ -11,7 +11,7 @@
 	</parent>
 	<groupId>com.sgcpf</groupId>
 	<artifactId>sgcpf</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>sgcpf</name>
 	<description>API - Gestão de CPF</description>
 
@@ -83,7 +83,7 @@
 				</executions>
 				<configuration>
 					<useMavenSettingsForAuth>true</useMavenSettingsForAuth>
-					<repository>edsonbjr/spring-docker-sgcpf</repository>
+					<repository>{SEU_DOCKER_ID}/spring-docker-sgcpf</repository>
 					<tag>${project.version}</tag>
 					<buildArgs>
 					  <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
