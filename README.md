@@ -12,9 +12,9 @@ Java 11 - Spring 2.3.3 - H2 Database - Apache Maven 3.6.3 - Docker 19.03.12
 
 #### Como rodar e testar a api
 
-Duas são as opções de obter a api e executa-la:
+### Duas são as opções de obter a api e executa-la:
 
-Primeira Opção:
+### Primeira Opção:
 Atráves do download do repositorio do Docker Hub, abaixo segue o link para download:
 
 [Docker Hub](https://hub.docker.com/r/edsonbjr/spring-docker-sgcpf)
@@ -29,8 +29,8 @@ Após o download executar o comando abaixo para rodar a api como um container Do
 
 Feito isso ja temos um container da ultima versão da API em execução e pode ser testada conforme a explicação abaixo:
 
-Segunda Opção:
-Essa opção é para o caso de querer fazer alguma alteração e personalizar a sua versão do container, por exemplo.
+### Segunda Opção:
+Essa opção é para quem optar por fazer alguma alteração e personalizar a sua versão do container, por exemplo.
 
 Clone o projeto, digitando o comando abaixo:
 
@@ -82,6 +82,7 @@ O resultado dever ser algo parecido com a tabela abaixo:
 Agora já pode rodar sua imagem docker, use o comando abaixo:
 
 	docker run -p 8080:8080 {seu_docker_id}/sgcpf:0.0.1
+
 
 #### Como Testar as funcionalidade da API
 
