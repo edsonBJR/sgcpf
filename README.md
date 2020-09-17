@@ -81,19 +81,18 @@ Agora já pode rodar sua imagem docker, use o comando abaixo:
 
 	docker run -p 8080:8080 {seu_docker_id}/sgcpf:0.0.1
 
-
 #### Como Testar as funcionalidade da API
 
 __Sugestão, utilizar o Postman para teste dos endpoints,__ mas caso queira o comando __curl__ executado pela linha de comando, também é bem vindo.
 
 A tabela abaixo descreve o verbo http a uri do recurso e o que esperar de retorno da requisição.
 
-|Verbo|URI|Retorno da Requisição| CORPO |
+|Verbo|URI| CORPO |Retorno da Requisição|
 |-|-|-|-|
-|GET | http://localhost:8080/cpf | Listar todos os CPF's cadastrados  ||
-|GET | http://localhost:8080/cpf/{cpf} | Consultar se um CPF está cadastrado, nessário informar um CPF válido. ||
-|POST | http://localhost:8080/cpf | Cadastrar um CPF, necessário enviar um CPF no corpo da requisição, somente os numeros| { "cpf": "00012649074" }|
-|DELETE|http://localhost:8080/cpf/{cpf}|Deletar um CPF, necessário informar um CPF "válido" na url da requisição.||
+|GET | http://localhost:8080/cpf | | Listar todos os CPF's cadastrados  |
+|GET | http://localhost:8080/cpf/{cpf} | | Consultar se um CPF está cadastrado, nessário informar um CPF válido. |
+|POST | http://localhost:8080/cpf | ```{ "cpf": "00012649074" }``` | Cadastrar um CPF, necessário enviar um CPF no corpo da requisição, somente os numeros|
+|DELETE|http://localhost:8080/cpf/{cpf}| | Deletar um CPF, necessário informar um CPF "válido" na url da requisição.|
 
 *O CPF utilizado na tabela acima, foi gerado aleatóriamente para exemplificar o teste.
 
